@@ -1,4 +1,6 @@
 from fila_base import FilaBase
+
+
 class Fila_Normal(FilaBase):
 
     def gera_senha_atual(self) -> None:

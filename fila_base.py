@@ -1,3 +1,4 @@
+from constantes import TAMANHO_PADRAO_MAXIMO, TAMANHO_PADRAO_MINIMO
 import abc
 
 
@@ -7,8 +8,8 @@ class FilaBase(metaclass=abc.ABCMeta):
     clientes_atendidos = []
     senha_atual: str = ""
     def reseta_fila(self) -> None:
-        if self.codigo >= 100:
-            self.codigo = 0
+        if self.codigo >= TAMANHO_PADRAO_MAXIMO:
+            self.codigo = TAMANHO_PADRAO_MINIMO
         else:
             self.codigo += 1
 

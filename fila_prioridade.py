@@ -6,10 +6,6 @@ class FilaPrioritaria(FilaBase):
     def gera_senha_atual(self) -> None:
         self.senha_atual = f'PR{self.codigo}'
 
-    def atualiza_fila(self) -> None:
-        self.gera_senha_atual()
-        self.reseta_fila()
-        self.fila.append(self.senha_atual)
 
     def chama_cliente(self, caixa: int) -> str:
         cliente_atual:str = self.fila.pop(0)
